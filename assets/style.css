@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap');
+@keyframes logo {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(25px);
+    }
+}
+
+:root {
+    font-size: 14px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://www.dragonaere.tk/assets/background.jpg') no-repeat center center / cover;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.logo {
+    animation: logo 1s ease-in-out infinite alternate;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    width: 250px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 1));
+}
+
+@media (max-width: 450px) {
+    .logo img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+.server-status {
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.server-status i {
+    margin: 0 0.15rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 380px) {
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 0 2rem;
+    transition: opacity 0.2s ease;
+}
+
+@media (max-width: 380px) {
+    .button {
+        margin: 1rem 1rem;
+    }
+}
+
+.button:hover {
+    opacity: 0.65;
+}
+
+.button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.35);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.button .icon .fa-discord {
+    transform: translateY(2px);
+}
+
+.button .text {
+    margin-top: 0.85rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.7);
+}
